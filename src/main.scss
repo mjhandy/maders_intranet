@@ -1,0 +1,9 @@
+@use './scss/variables';
+
+
+
+body {
+  font-family: Arial, sans-serif;
+  // background: $primary-color;
+  color: var(--black);
+}

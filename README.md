@@ -1,2 +1,2 @@
 # maders_intranet
-Intraner site for Mader's General Store
+Intranet site for Mader's General Store

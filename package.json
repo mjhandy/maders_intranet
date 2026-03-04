@@ -1,0 +1,27 @@
+{
+  "name": "maders_intranet",
+  "version": "1.0.0",
+  "description": "Intranet site for Mader's General Store",
+  "main": "index.js",
+"scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mjhandy/maders_intranet.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/mjhandy/maders_intranet/issues"
+  },
+  "homepage": "https://github.com/mjhandy/maders_intranet#readme",
+  "dependencies": {
+    "sass": "^1.97.3",
+    "vite": "^7.3.1"
+  }
+}
