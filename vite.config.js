@@ -1,14 +1,21 @@
 // vite.config.js
-import { defineConfig } from 'vite';
+import { defineConfig } from "vite";
+
+const path = require("path");
 
 export default defineConfig({
-  root: 'src', // folder for your JS/CSS source files
+  root: path.resolve(__dirname, "src"), // folder for your JS/CSS source files
+  resolve: {
+    alias: {
+      "~bootstrap": path.resolve(__dirname, "node_modules/bootstrap"),
+    },
+  },
   build: {
-    outDir: '../dist/assets', // where built files go
+    outDir: "../dist/assets", // where built files go
     emptyOutDir: true,
     manifest: true, // generate manifest.json for PHP to read
     rollupOptions: {
-      input: './src/main.js', // entry point
+      input: "./src/main.js", // entry point
     },
   },
   server: {
