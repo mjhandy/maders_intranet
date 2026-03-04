@@ -1,6 +1,7 @@
 <?php
 function vite_asset($entry) {
-    $devServer = 'http://localhost:5173';
+    // $devServer = 'http://localhost:5173';
+    $devServer = 'http://intranet.maders.com/';
     $manifestPath = __DIR__ . '/assets/.vite/manifest.json';
 
     // Dev mode: load directly from Vite server

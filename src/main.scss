@@ -1,4 +1,5 @@
-@use "~bootstrap/scss/bootstrap";
+// @use "~bootstrap/scss/bootstrap";
+@use './scss/bootstrapIncludes';
 @use './scss/variables';
 @use './scss/helpers';
 
@@ -7,4 +8,5 @@ body {
   font-family: Arial, sans-serif;
   // background: $primary-color;
   color: var(--black);
+  font-weight: 400;
 }

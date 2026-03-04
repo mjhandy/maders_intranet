@@ -6,7 +6,10 @@
     
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Vite + PHP</title>
-    <?php echo vite_asset('main.js'); ?>
+    <?php 
+      // echo vite_asset('main.js'); 
+      ?>
+    <script type="module" src="../../src/main.js"></script>
 </head>
 <body>
     <?php
