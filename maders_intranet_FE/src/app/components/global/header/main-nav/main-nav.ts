@@ -1,4 +1,4 @@
-import { Component, ElementRef, ViewChild } from '@angular/core';
+import { Component } from '@angular/core';
 
 import { CommonModule } from '@angular/common';
 import { RouterModule, Router } from '@angular/router';
@@ -13,8 +13,6 @@ import { RouterModule, Router } from '@angular/router';
   styleUrl: './main-nav.scss',
 })
 export class MainNav {
-
-  @ViewChild('closeButton') closeButton: ElementRef<HTMLElement> | undefined
 
   routes: {
     path: string;
