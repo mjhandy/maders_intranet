@@ -1,1 +1,47 @@
-<p>main-nav works!</p>
+<nav id="mainNav" #mainNav>
+  <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+    @for (route of routes; track route.title) {
+      @if (!route.children) {
+        <li class="nav-item">
+          <a
+            [routerLink]="[route.path]"
+            class="nav-link"
+            routerLinkActive="active"
+            >{{ route.label }}</a
+          >
+        </li>
+      }
+
+      @if (route.children) {
+        <li class="nav-item dropdown">
+          <a
+            class="nav-link dropdown-toggle"
+            href="#"
+            id="{{ route.path }}Dropdown"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            {{ route.label }}
+          </a>
+          <ul class="dropdown-menu">
+            <li>
+              <a class="dropdown-item" [routerLink]="[route.path]"
+                >{{ route.label }} Overview</a
+              >
+            </li>
+            @for (child of route.children; track child.label) {
+              <li>
+                <a
+                  class="dropdown-item"
+                  [routerLink]="[route.path, child.path]"
+                  >{{ child.label }}</a
+                >
+              </li>
+            }
+          </ul>
+        </li>
+      }
+    }
+  </ul>
+</nav>
