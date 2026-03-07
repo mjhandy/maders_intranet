@@ -28,7 +28,7 @@
           <ul class="dropdown-menu">
             <li>
               <a class="dropdown-item" [routerLink]="[route.path]"
-                >{{ route.label }} Overview</a
+                >{{ route.label }}s Overview</a
               >
             </li>
             @for (child of route.children; track child.label) {
@@ -43,6 +43,7 @@
           </ul>
         </li>
       }
+
     }
   </ul>
 </nav>

@@ -13,7 +13,7 @@ export const routes: Routes = [
     data: {
       description: "Mader's Internet Home Page",
       label: 'Home',
-      showInMain: false,
+      showInMain: true,
       showInFooter: true,
       h1: 'Digital Visibility. <br>Human Connetion.',
       h2: 'We craft inclusive digital experiences that don’t just perform, they resonate.',
@@ -24,4 +24,42 @@ export const routes: Routes = [
       ctaTarget: 'contact-us'
     }
   },
+  {
+    path: 'contacts',
+    loadComponent: () => import('./components/pages/contacts/contacts').then(m => m.Contacts),
+    title: "Contacts | Mader's Intranet",
+    data: {
+      description: "Mader's Intranet Contacts",
+      label: 'Contact',
+      showInMain: true,
+      showInFooter: true,
+      h1: 'Digital Visibility. <br>Human Connetion.',
+      h2: 'We craft inclusive digital experiences that don’t just perform, they resonate.',
+      desktopImage: 'castle-loch-bridge.webp',
+      mobileImage: 'castle-loch-bridge.webp',
+      headerPostion: 'left',
+      ctaCopy: 'Book An Audit',
+      ctaTarget: 'contact-us'
+    },
+    children: [
+      {
+        path: 'contacts/vendors',
+        loadComponent: () => import('./components/pages/contacts/contacts').then(m => m.Contacts),
+        title: "Contacts | Mader's Intranet",
+        data: {
+          description: "Mader's Intranet Contacts",
+          label: 'Vendors',
+          showInMain: true,
+          showInFooter: true,
+          h1: 'Digital Visibility. <br>Human Connetion.',
+          h2: 'We craft inclusive digital experiences that don’t just perform, they resonate.',
+          desktopImage: 'castle-loch-bridge.webp',
+          mobileImage: 'castle-loch-bridge.webp',
+          headerPostion: 'left',
+          ctaCopy: 'Book An Audit',
+          ctaTarget: 'contact-us'
+        },
+      }
+    ]
+  }
 ];
