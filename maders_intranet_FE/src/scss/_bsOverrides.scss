@@ -1,0 +1,212 @@
+/// 
+/// Boostrap Overrides
+/// 
+/// 
+
+/// SCSS Prefix. Adjust this to change the prefix for all classes.
+/// @group sv
+$prefix: "dmg-";
+
+/// Base White
+/// @group cv
+/// @type colour
+$white: #ffffff;
+$whiteRGBA: hex-to-rgba($white, 1);
+
+/// Base Black
+/// @group cv
+/// @type colour
+$black: #000000;
+$blackRGBA: hex-to-rgba($black, 1);
+
+/// Site Colours
+/// @group cv
+/// @type colour
+$dmgColours: (
+  black: $black,
+  white: $white,
+  blue: #004360,
+  royalBlue: #005EB8,
+  orange: #E86000,
+  red: #B4001E,
+  yellow: #FFD228,
+  green: green
+);
+
+
+
+/// Sans Serif Font Family
+/// @group tv
+$font-family-sans-serif: "Roboto",
+  "Helvetica Neue",
+  Arial,
+  sans-serif !default;
+
+/// Serif Font Family
+/// @group tv
+$font-family-serif: "Georgia",
+  "Times New Roman",
+  Times,
+  serif !default;
+
+/// Base font size
+/// @group tv
+$font-size-base: 1.25rem !default; // this can only have a REM unit, PX will cause an error
+
+/// base font wieght
+/// @group tv
+$font-base-weight: 400;
+
+/// Base line height
+/// @group tv
+$line-height-base: 1.5; // this can only have a REM unit, PX will cause an error
+
+/// Base Heading Line Height
+/// @group tv
+$line-height-heading: 1.2;
+
+/// Base font colour
+/// @group tv
+$base-colour: map-get($monochrome, 105); // default base color
+
+/// Strong font colour
+/// @group tv
+$strong-colour: map-get($monochrome, 100);
+
+/// Link Colour
+/// @group tv
+$link-colour: map-get($dmgColours, blue);
+$link-colour-hover: map-get($dmgColours, orange);
+$link-colour-visted: map-get($dmgColours, orange);
+$link-colour-underline: map-get($dmgColours, orange);
+$link-colour-focus: map-get($dmgColours, orange);
+$link-colour-active: map-get($dmgColours, orange);
+
+/// Heading sizes
+/// @group sm
+/// @example Usage
+///   .h1{
+///     font-size: map-get($heading, h1);
+///    }
+$heading: (
+  h1: $font-size-base * 2.5,
+  h2: $font-size-base * 1.5,
+  h3: $font-size-base * 1.25,
+  h4: $font-size-base * 1.5,
+  h5: $font-size-base * 1.25,
+  h6: $font-size-base * 1.125,
+  ) !default;
+
+/// font size increase
+/// 
+$fontSize: (
+  f125: $font-size-base * 1.25,
+  f150: $font-size-base * 1.5,
+  f175: $font-size-base * 1.75,
+  f200: $font-size-base * 2,
+);
+
+// package cards
+
+/// Grid breakpoints Updates
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1440px,
+  xxxl: 1600px
+);
+
+/// Container max widths
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1400px,
+  xxl: 1440px
+);
+
+/// Control the default styling of most Bootstrap elements by modifying these
+/// variables. Mostly focused on spacing.
+$spacer: 10px;
+$spacers: (
+);
+// stylelint-disable-next-line scss/dollar-variable-default
+$spacers: map-merge((0: 0,
+      1: ($spacer * 0.5), // 5px
+      2: ($spacer * 1), // 10px
+      3: ($spacer * 1.5), // 15px
+      4: ($spacer * 2), // 20px
+      5: ($spacer * 2.5), // 25px
+      6: ($spacer * 3), // 30px
+      7: ($spacer * 3.5) // 35px
+    ), $spacers);
+// This variable affects the `.h-*` and `.w-*` classes.
+
+$sizes: (
+);
+// stylelint-disable-next-line scss/dollar-variable-default
+$sizes: map-merge((25: 25%,
+      33: 33%,
+      50: 50%,
+      75: 75%,
+      100: 100%,
+      auto: auto), $sizes);
+
+/// basic BS items
+
+
+/// navbar
+$navbar-toggler-padding-y: 0;
+$navbar-toggler-padding-x: 0;
+$navbar-toggler-font-size: 1.75rem;
+
+/// offcanvas
+$offcanvas-bg-color: map-get($dmgColours, white);
+$offcanvas-horizontal-width: 100vw;
+$offcanvas-color: map-get($dmgColours, black);
+
+// dropdown
+$dropdown-bg-color: map-get($dmgColours, white);
+$drowdown-border-color: transparent;
+$dropdown-border-radius: 0;
+$dropdown-border-width: 0;
+$dropdown-spacer: 10px;
+
+// cards
+$card-spacer-y: $spacer;
+$card-spacer-x: $spacer;
+$card-title-spacer-y: $spacer * .5;
+$card-title-color: map-get($dmgColours, blue);
+$card-subtitle-color: null;
+$card-border-width: 0;
+$card-border-color: null;
+$card-border-radius: null;
+$card-inner-border-radius: null;
+$card-cap-padding-y: $card-spacer-y * .5;
+$card-cap-padding-x: $card-spacer-x;
+$card-cap-bg: null;
+$card-cap-color: null;
+$card-height: null;
+$card-color: null;
+$card-bg: null;
+$card-img-overlay-padding: $spacer;
+$card-group-margin: 2px * .5;
+
+/* custom variable values:END */
+
+// button colours
+$btn-heroBanner-primary-bg: $white;
+$btn-heroBanner-primary-text: map-get($dmgColours, blue);
+$btn-heroBanner-secondary-bg: map-get($dmgColours, blue);
+$btn-heroBanner-secondary-text: $white;
+
+$btn-primary-bg: map-get($dmgColours, blue);
+$btn-primary-text: $white;
+$btn-secondary-bg: map-get($dmgColours, blue);
+$btn-secondary-text: $white;
+$btn-icon-colour: map-get($dmgColours, orange);
+
+/* Utilities */
