@@ -1,11 +1,11 @@
-/// 
+///
 /// Boostrap Overrides
-/// 
-/// 
+///
+///
 
 /// SCSS Prefix. Adjust this to change the prefix for all classes.
 /// @group sv
-$prefix: "mgs-";
+$prefix: 'mgs-';
 
 /// Base White
 /// @group cv
@@ -26,28 +26,20 @@ $colours: (
   black: $black,
   white: $white,
   blue: #004360,
-  royalBlue: #005EB8,
-  orange: #E86000,
-  red: #B4001E,
-  yellow: #FFD228,
-  green: green
+  royalBlue: #005eb8,
+  orange: #e86000,
+  red: #b4001e,
+  yellow: #ffd228,
+  green: green,
 );
-
-
 
 /// Sans Serif Font Family
 /// @group tv
-$font-family-sans-serif: "Roboto",
-  "Helvetica Neue",
-  Arial,
-  sans-serif !default;
+$font-family-sans-serif: 'Helvetica Neue', Arial, sans-serif !default;
 
 /// Serif Font Family
 /// @group tv
-$font-family-serif: "Georgia",
-  "Times New Roman",
-  Times,
-  serif !default;
+$font-family-serif: 'Georgia', 'Times New Roman', Times, serif !default;
 
 /// Base font size
 /// @group tv
@@ -65,22 +57,6 @@ $line-height-base: 1.5; // this can only have a REM unit, PX will cause an error
 /// @group tv
 $line-height-heading: 1.2;
 
-/// Base font colour
-/// @group tv
-// $base-colour: map-get($monochrome, 105); // default base color
-
-/// Strong font colour
-/// @group tv
-// $strong-colour: map-get($monochrome, 100);
-
-/// Link Colour
-/// @group tv
-// $link-colour: map-get($dmgColours, blue);
-// $link-colour-hover: map-get($dmgColours, orange);
-// $link-colour-visted: map-get($dmgColours, orange);
-// $link-colour-underline: map-get($dmgColours, orange);
-// $link-colour-focus: map-get($dmgColours, orange);
-// $link-colour-active: map-get($dmgColours, orange);
 
 /// Heading sizes
 /// @group sm
@@ -95,10 +71,10 @@ $heading: (
   h4: $font-size-base * 1.5,
   h5: $font-size-base * 1.25,
   h6: $font-size-base * 1.125,
-  ) !default;
+) !default;
 
 /// font size increase
-/// 
+///
 $fontSize: (
   f125: $font-size-base * 1.25,
   f150: $font-size-base * 1.5,
@@ -116,7 +92,7 @@ $grid-breakpoints: (
   lg: 992px,
   xl: 1200px,
   xxl: 1440px,
-  xxxl: 1600px
+  xxxl: 1600px,
 );
 
 /// Container max widths
@@ -125,41 +101,65 @@ $container-max-widths: (
   md: 720px,
   lg: 960px,
   xl: 1400px,
-  xxl: 1440px
+  xxl: 1440px,
 );
 
 /// Control the default styling of most Bootstrap elements by modifying these
 /// variables. Mostly focused on spacing.
 $spacer: 10px;
-$spacers: (
-);
+$spacers: ();
 // stylelint-disable-next-line scss/dollar-variable-default
-$spacers: map-merge((0: 0,
-      1: ($spacer * 0.5), // 5px
-      2: ($spacer * 1), // 10px
-      3: ($spacer * 1.5), // 15px
-      4: ($spacer * 2), // 20px
-      5: ($spacer * 2.5), // 25px
-      6: ($spacer * 3), // 30px
-      7: ($spacer * 3.5) // 35px
-    ), $spacers);
+$spacers: map-merge(
+  (
+    0: 0,
+    1: (
+      $spacer * 0.5,
+    ),
+    // 5px
+    2: (
+        $spacer * 1,
+      ),
+    // 10px
+    3: (
+        $spacer * 1.5,
+      ),
+    // 15px
+    4: (
+        $spacer * 2,
+      ),
+    // 20px
+    5: (
+        $spacer * 2.5,
+      ),
+    // 25px
+    6: (
+        $spacer * 3,
+      ),
+    // 30px
+    7: (
+        $spacer * 3.5,
+      ), // 35px
+  ),
+  $spacers
+);
 // This variable affects the `.h-*` and `.w-*` classes.
 
-$sizes: (
-);
+$sizes: ();
 // stylelint-disable-next-line scss/dollar-variable-default
-$sizes: map-merge((25: 25%,
-      33: 33%,
-      50: 50%,
-      75: 75%,
-      100: 100%,
-      auto: auto), $sizes);
+$sizes: map-merge(
+  (
+    25: 25%,
+    33: 33%,
+    50: 50%,
+    75: 75%,
+    100: 100%,
+    auto: auto,
+  ),
+  $sizes
+);
 
 /// basic BS items
 
-
-
 /* custom variable values:END */
-
 
 /* Utilities */
